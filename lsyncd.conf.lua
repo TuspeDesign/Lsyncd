@@ -9,7 +9,7 @@ settings {
 sync {
 	default.rsync,
 	source = '/home',
-	target = 'double:/sites',
+	target = 'double:/home',
 	delete = 'running',
 	delay = 1,
 	rsync = {
