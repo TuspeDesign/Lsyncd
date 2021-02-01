@@ -3,5 +3,5 @@ Host *
 Host double
   HostName 192.168.0.1
   User timo
-  Port 3856
+  Port 1337
   IdentityFile ~/.ssh/id_double
