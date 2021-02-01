@@ -11,6 +11,27 @@ sync {
 	source = '/home',
 	target = 'double:/home',
 	delete = 'running',
+	delay = 5,
+	rsync = {
+		update = true,
+		times = true,
+		archive = true,
+		compress = true,
+		owner = true,
+		perms = true,
+		group = true,
+		acls = true,
+		verbose = false,
+		rsh = "/usr/bin/ssh -i /home/user/.ssh/id_double -o StrictHostKeyChecking=no",
+		_extra = {"--temp-dir=/tmp/"}
+	}
+}
+
+sync {
+	default.rsync,
+	source = '/var/lib/mysql',
+	target = 'double:/var/lib/mysql',
+	delete = 'running',
 	delay = 1,
 	rsync = {
 		update = true,
@@ -32,7 +53,7 @@ sync {
 	source = '/etc/apache2',
 	target = 'double:/etc/apache2',
 	delete = 'running',
-	delay = 1,
+	delay = 20,
 	rsync = {
 		update = true,
 		times = true,
