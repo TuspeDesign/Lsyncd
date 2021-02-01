@@ -9,7 +9,7 @@ settings {
 sync {
 	default.rsync,
 	source = '/home',
-	target = 'timo@92.168.0.2:/sites',
+	target = 'double:/sites',
 	delete = 'running',
 	delay = 1,
 	rsync = {
@@ -22,7 +22,7 @@ sync {
 		group = true,
 		acls = true,
 		verbose = false,
-		rsh = "/usr/bin/ssh -i /root/.ssh/id_double -o StrictHostKeyChecking=no",
+		rsh = "/usr/bin/ssh -i /home/user/.ssh/id_double -o StrictHostKeyChecking=no",
 		_extra = {"--temp-dir=/tmp/"}
 	}
 }
@@ -30,7 +30,7 @@ sync {
 sync {
 	default.rsync,
 	source = '/etc/apache2',
-	target = 'timo@92.168.0.2:/etc/apache2',
+	target = 'double:/etc/apache2',
 	delete = 'running',
 	delay = 1,
 	rsync = {
@@ -43,7 +43,7 @@ sync {
 		group = true,
 		acls = true,
 		verbose = false,
-		rsh = "/usr/bin/ssh -i /root/.ssh/id_double -o StrictHostKeyChecking=no",
+		rsh = "/usr/bin/ssh -i /home/user/.ssh/id_double -o StrictHostKeyChecking=no",
 		_extra = {"--temp-dir=/tmp/"}
 	}
 }
